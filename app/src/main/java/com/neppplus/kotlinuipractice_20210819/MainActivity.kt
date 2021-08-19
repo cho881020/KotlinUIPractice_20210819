@@ -10,6 +10,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        moveToTextViewBtn.setOnClickListener {
+
+//            입력한 메세지를 -> 변수에 저장해서 -> 텍스트뷰의 -> text속성으로 대입
+
+            val inputMessage = messageEdt.text.toString()
+
+            resultTxt.text = inputMessage
+
+        }
+
         toastBtn.setOnClickListener {
 
 //            입력한 메세지가 뭔지? 변수에 저장.
